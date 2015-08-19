@@ -1,7 +1,7 @@
 === Checksum Verifier ===
 Contributors: pluginkollektiv
 Tags: security, md5, hash, checksum, scan, malware, SoakSoak
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAQUT9RLPW8QN
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML
 Requires at least: 3.8
 Tested up to: 4.2.2
 Stable tag: trunk
@@ -46,7 +46,7 @@ Better security with WordPress.
 
 = Donations =
 * Via [Flattr](https://flattr.com/t/1628977)
-* Via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAQUT9RLPW8QN)
+* Via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML)
 
 
 = Author =
