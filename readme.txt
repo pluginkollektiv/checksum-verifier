@@ -13,11 +13,11 @@ Verifies MD5 checksums of WordPress core files, sends e-mail warning in case of 
 
 
 ## Description ##
-_Checksum Verifier_ calculates MD5 checksums for all existing WordPress core files and checks them against official checksums. It thus will detect and react upon any unrecognized modifications made on your WordPress core system (for example [SoakSoak malware](http://blog.sucuri.net/2014/12/soaksoak-malware-compromises-100000-wordpress-websites.html)).
+*Checksum Verifier* calculates MD5 checksums for all existing WordPress core files and checks them against official checksums. It thus will detect and react upon any unrecognized modifications made on your WordPress core system (for example [SoakSoak malware](http://blog.sucuri.net/2014/12/soaksoak-malware-compromises-100000-wordpress-websites.html)).
 
-_Checksum Verifier_ runs a daily check on MD5 checksums. In case an unexpected result is detected in core, the plugin will send an e-mail with a list of affected files to site administrators (or super-admins in WordPress multisite). The first check-up will be executed during plugin activation. Regular core updates won’t cause any alarm, of course. Only in case core files have been compromised and your site might have been hacked, the plugin will notify you.
+*Checksum Verifier* runs a daily check on MD5 checksums. In case an unexpected result is detected in core, the plugin will send an e-mail with a list of affected files to site administrators (or super-admins in WordPress multisite). The first check-up will be executed during plugin activation. Regular core updates won’t cause any alarm, of course. Only in case core files have been compromised and your site might have been hacked, the plugin will notify you.
 
-_Checksum Verifier_ works as a “silent” background process and will only bother you in case of unexpected file modifications that could potentially threaten your core install.
+*Checksum Verifier* works as a "silent" background process and will only bother you in case of unexpected file modifications that could potentially threaten your core install.
 
 Better security with WordPress.
 
@@ -36,7 +36,7 @@ Better security with WordPress.
 
 ### Support ###
 * Community support via the [support forums on wordpress.org](https://wordpress.org/support/plugin/checksum-verifier)
-* We don’t handle support via e-mail, Twitter, GitHub issues etc.
+* We don't handle support via e-mail, Twitter, GitHub issues etc.
 
 ### Contribute ###
 * Active development of this plugin is handled [on GitHub](https://github.com/pluginkollektiv/checksum-verifier).
