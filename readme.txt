@@ -3,14 +3,12 @@
 * Tags:              security, md5, hash, checksum, scan, malware, SoakSoak
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML
 * Requires at least: 3.8
-* Tested up to:      4.6
+* Tested up to:      4.7
 * Stable tag:        trunk
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
-
 Verifies MD5 checksums of WordPress core files, sends e-mail warning in case of threat.
-
 
 ## Description ##
 *Checksum Verifier* calculates MD5 checksums for all existing WordPress core files and checks them against official checksums. It thus will detect and react upon any unrecognized modifications made on your WordPress core system (for example [SoakSoak malware](http://blog.sucuri.net/2014/12/soaksoak-malware-compromises-100000-wordpress-websites.html)).
@@ -21,18 +19,8 @@ Verifies MD5 checksums of WordPress core files, sends e-mail warning in case of 
 
 Better security with WordPress.
 
-
 ### Usable Hooks ###
 * [checksum_verifier_ignore_files](https://gist.github.com/sergejmueller/59c014d82347215784f4)
-
-### Memory Usage ###
-* Back-end: ~ 0,06 MB
-* Front-end: ~ 0,01 MB
-
-### Available Languages ###
-* English
-* Deutsch
-* Русский
 
 ### Support ###
 * Community support via the [support forums on wordpress.org](https://wordpress.org/support/plugin/checksum-verifier)
