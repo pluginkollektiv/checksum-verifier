@@ -185,7 +185,7 @@ class Checksum_Verifier
     {
         /* Text domain on demand */
         load_plugin_textdomain(
-            'checksum_verifier',
+            'checksum-verifier',
             false,
             dirname(CHECKSUM_VERIFIER_BASE). '/lang'
         );
@@ -198,7 +198,7 @@ class Checksum_Verifier
             sprintf(
                 '[%s] %s',
                 get_bloginfo('name'),
-                esc_html__('Checksum Verifier Alert', 'checksum_verifier')
+                esc_html__('Checksum Verifier Alert', 'checksum-verifier')
             ),
             ENT_QUOTES
         );
@@ -207,7 +207,7 @@ class Checksum_Verifier
         $body = wp_specialchars_decode(
             sprintf(
                 "%s:\r\n\r\n- %s",
-                esc_html__('Official checksums do not match for the following files', 'checksum_verifier'),
+                esc_html__('Official checksums do not match for the following files', 'checksum-verifier'),
                 implode("\r\n- ", $matches)
             ),
             ENT_QUOTES
@@ -225,7 +225,7 @@ class Checksum_Verifier
             error_log(
                 sprintf(
                     '%s: %s',
-                    esc_html__('Checksums do not match for the following files', 'checksum_verifier'),
+                    esc_html__('Checksums do not match for the following files', 'checksum-verifier'),
                     implode(', ', $matches)
                 )
             );
@@ -262,11 +262,11 @@ class Checksum_Verifier
         return array_merge(
             $input,
             array(
-                '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML" target="_blank">PayPal</a>',
-                '<a href="https://flattr.com/thing/9e7774382f03ec4cb52bfd2acec4b1aa" target="_blank">Flattr</a>',
+                '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate', 'checksum-verifier' ) . '</a>',
+                '<a href="https://wordpress.org/support/plugin/checksum-verifier" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'checksum-verifier' ) . '</a>',
                 sprintf(
                     '%s %s',
-                    esc_html__('Next check in', 'checksum_verifier'),
+                    esc_html__('Next check in', 'checksum-verifier'),
                     $scheduled
                 )
             )
