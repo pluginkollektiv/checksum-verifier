@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Checksum Verifier
-Text Domain: checksum_verifier
+Text Domain: checksum-verifier
 Domain Path: /lang
 Description: Verifies MD5 checksums of WordPress core files, sends e-mail warning in case of threat.
-Author: Sergej M&uuml;ller
-Author URI: http://wpcoder.de
+Author: pluginkollektiv
+Author URI: http://pluginkollektiv.org
 Plugin URI: https://wordpress.org/plugins/checksum-verifier/
 License: GPLv2 or later
 Version: 0.0.1
