@@ -1,0 +1,16 @@
+{
+  "name": "checksum-verifier",
+  "version": "0.0.1",
+  "description": "Verifies MD5 checksums of WordPress core files, sends e-mail warning in case of threat.",
+  "author": "pluginkollektiv",
+  "license": "GPLv2 or later",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-copy": "^1.0.0",
+    "gulp-zip": "^4.0.0",
+    "gulp-composer": "^0.4.0",
+    "gulp-phpcs": "^2.0.0",
+    "child_process": "^1.0.2"
+  }
+}
