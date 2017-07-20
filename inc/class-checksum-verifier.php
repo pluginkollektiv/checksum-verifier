@@ -125,11 +125,6 @@ class Checksum_Verifier {
 	 * @return  array            File paths
 	 */
 	private static function _match_checksums( $checksums ) {
-		// Reset time limit.
-		if ( ! ini_get( 'safe_mode' ) ) {
-			set_time_limit( 0 );
-		}
-
 		// Ignore files filter.
 		$ignore_files = (array) apply_filters(
 			'checksum_verifier_ignore_files',
