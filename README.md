@@ -3,7 +3,7 @@
 * Tags:              security, md5, hash, checksum, scan, malware, SoakSoak
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML
 * Requires at least: 3.8
-* Tested up to:      4.7
+* Tested up to:      4.8
 * Stable tag:        trunk
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -38,14 +38,14 @@ Better security with WordPress.
 * English Translator: [Caspar Hübinger](http://glueckpress.com)
 * Russian Translator: [Sergej Müller](http://wpcoder.de)
 
-
 ## Installation ##
 * If you don’t know how to install a plugin for WordPress, [here’s how](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins).
 
 ### System Requirements ###
 * WordPress 3.8 and higher
-
+* PHP 5.3 and higher
 
 ## Changelog ##
+
 ### 0.0.1 ###
 * *Checksum Verifier* goes live
