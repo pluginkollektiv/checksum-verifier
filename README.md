@@ -20,7 +20,9 @@ Verifies MD5 checksums of WordPress core files, sends e-mail warning in case of 
 Better security with WordPress.
 
 ### Usable Hooks ###
-* [checksum_verifier_ignore_files](https://gist.github.com/sergejmueller/59c014d82347215784f4)
+* `checksum_verifier_ignore_files`<br>
+ Modify or extend an `array` of file paths to be excluded from verification, relative to your WordPress installation path.<br>
+ Default is `array('wp-config-sample.php', 'wp-includes/version.php')`.  
 
 ### Support ###
 * Community support via the [support forums on wordpress.org](https://wordpress.org/support/plugin/checksum-verifier)
@@ -43,9 +45,13 @@ Better security with WordPress.
 
 ### System Requirements ###
 * WordPress 3.8 and higher
-* PHP 5.3 and higher
+* PHP 5.2.4 and higher
 
 ## Changelog ##
+
+### unreleased ###
+* Minor code enhancements
+* Removed explicitly setting maximum execution time
 
 ### 0.0.1 ###
 * *Checksum Verifier* goes live
