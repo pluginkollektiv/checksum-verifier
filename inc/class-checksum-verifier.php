@@ -75,11 +75,6 @@ class Checksum_Verifier {
 			)
 		);
 
-		// Exit on error.
-		if ( is_wp_error( $response ) ) {
-			return;
-		}
-
 		// Check response code.
 		if ( wp_remote_retrieve_response_code( $response ) !== 200 ) {
 			return;
@@ -139,13 +134,13 @@ class Checksum_Verifier {
 
 		// Loop files.
 		foreach ( $checksums as $file => $checksum ) {
-			// File path.
-			$file_path = ABSPATH . $file;
-
-			// Skip version.php.
+			// Skip ignored files.
 			if ( in_array( $file, $ignore_files, true ) ) {
 				continue;
 			}
+
+			// File path.
+			$file_path = ABSPATH . $file;
 
 			// File check.
 			if ( 0 !== validate_file( $file_path ) || ! file_exists( $file_path ) ) {
