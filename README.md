@@ -4,7 +4,7 @@
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW
 * Requires at least: 3.8
 * Tested up to:      4.8
-* Stable tag:        trunk
+* Stable tag:        0.0.2
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,7 +49,8 @@ Better security with WordPress.
 
 ## Changelog ##
 
-### unreleased ###
+### 0.0.2 ###
+* `wp-content/` directory is excluded from verification
 * Minor code enhancements
 * Removed explicitly setting maximum execution time
 

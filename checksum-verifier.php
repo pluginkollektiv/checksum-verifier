@@ -10,7 +10,7 @@
  * Plugin Name: Checksum Verifier
  * Plugin URI:  https://wordpress.org/plugins/checksum-verifier/
  * Description: Verifies MD5 checksums of WordPress core files, sends e-mail warning in case of threat.
- * Version:     0.0.1
+ * Version:     0.0.2
  * Author:      pluginkollektiv
  * Author URI:  https://github.com/pluginkollektiv
  * Text Domain: checksum-verifier
