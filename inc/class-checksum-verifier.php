@@ -134,8 +134,8 @@ class Checksum_Verifier {
 
 		// Loop files.
 		foreach ( $checksums as $file => $checksum ) {
-			// Skip ignored files.
-			if ( in_array( $file, $ignore_files, true ) ) {
+			// Skip ignored files and wp-content directory.
+			if ( 0 === strpos( $file, 'wp-content/' ) || in_array( $file, $ignore_files, true ) ) {
 				continue;
 			}
 
