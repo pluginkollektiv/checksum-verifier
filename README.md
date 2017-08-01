@@ -22,7 +22,7 @@ Better security with WordPress.
 ### Usable Hooks ###
 * `checksum_verifier_ignore_files`<br>
  Modify or extend an `array` of file paths to be excluded from verification, relative to your WordPress installation path.<br>
- Default is `array('wp-config-sample.php', 'wp-includes/version.php')`.  
+ Default is `array('wp-config-sample.php', 'wp-includes/version.php', 'readme.html', 'readme-ja.html', 'liesmich.html', 'olvasdel.html', 'procitajme.html')`.  
 
 ### Support ###
 * Community support via the [support forums on wordpress.org](https://wordpress.org/support/plugin/checksum-verifier)
@@ -51,6 +51,7 @@ Better security with WordPress.
 
 ### 0.0.2 ###
 * `wp-content/` directory is excluded from verification
+* Localized readme.html files excluded from verification 
 * Minor code enhancements
 * Removed explicitly setting maximum execution time
 

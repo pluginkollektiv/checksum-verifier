@@ -126,6 +126,11 @@ class Checksum_Verifier {
 			array(
 				'wp-config-sample.php',
 				'wp-includes/version.php',
+				'readme.html',      // Default readme file.
+				'readme-ja.html',   // Japanese readme, shipped up to 3.9 (ja).
+				'liesmich.html',    // German readme (de_DE).
+				'olvasdel.html',    // Hungarian readme (hu_HU).
+				'procitajme.html',  // Croatian readme (hr).
 			)
 		);
 
