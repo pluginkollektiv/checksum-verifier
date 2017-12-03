@@ -24,19 +24,19 @@ class Checksum_Verifier {
 	 */
 	public static function verify_files() {
 		// Get checksums via API.
-		$checksums = self::_get_checksums();
+		$checksums = self::get_checksums();
 		if ( ! $checksums ) {
 			return;
 		}
 
 		// Loop files and match checksums.
-		$matches = self::_match_checksums( $checksums );
+		$matches = self::match_checksums( $checksums );
 		if ( ! $matches ) {
 			return;
 		}
 
 		// Notification mail.
-		self::_notify_admin( $matches );
+		self::notify_admin( $matches );
 	}
 
 
@@ -47,7 +47,7 @@ class Checksum_Verifier {
 	 *
 	 * @return  array  Checksums getting from API.
 	 */
-	private static function _get_checksums() {
+	private static function get_checksums() {
 		// Blog information.
 		$version  = get_bloginfo( 'version' );
 		$language = get_locale();
@@ -119,7 +119,7 @@ class Checksum_Verifier {
 	 * @param   array $checksums File checksums.
 	 * @return  array            File paths
 	 */
-	private static function _match_checksums( $checksums ) {
+	private static function match_checksums( $checksums ) {
 		// Ignore files filter.
 		$ignore_files = (array) apply_filters(
 			'checksum_verifier_ignore_files',
@@ -170,7 +170,7 @@ class Checksum_Verifier {
 	 * @param   array $matches File paths.
 	 * @return  void
 	 */
-	private static function _notify_admin( $matches ) {
+	private static function notify_admin( $matches ) {
 		// Text domain on demand.
 		load_plugin_textdomain(
 			'checksum-verifier',

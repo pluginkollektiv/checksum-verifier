@@ -92,9 +92,7 @@ add_filter(
 
 
 // Autoload.
-require_once(
-	sprintf(
-		'%s/inc/autoload.php',
-		dirname( __FILE__ )
-	)
+require_once sprintf(
+	'%s/inc/autoload.php',
+	dirname( __FILE__ )
 );

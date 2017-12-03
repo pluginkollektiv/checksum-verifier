@@ -19,13 +19,11 @@ spl_autoload_register( 'checksum_verifier_autoload' );
  */
 function checksum_verifier_autoload( $class ) {
 	if ( in_array( $class, array( 'Checksum_Verifier' ), true ) ) {
-		require_once(
-			sprintf(
-				'%s%sclass-%s.php',
-				dirname( __FILE__ ),
-				DIRECTORY_SEPARATOR,
-				strtolower( str_replace( '_', '-', $class ) )
-			)
+		require_once sprintf(
+			'%s%sclass-%s.php',
+			dirname( __FILE__ ),
+			DIRECTORY_SEPARATOR,
+			strtolower( str_replace( '_', '-', $class ) )
 		);
 	}
 }
