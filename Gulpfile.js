@@ -22,7 +22,7 @@ gulp.task('compose', function () {
 
 // Execute PHP Code Sniffer.
 gulp.task('test-cs', function (cb) {
-	return exec('./vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs', function (err, stdout, stderr) {
+	return exec('./vendor/bin/phpcs --config-set installed_paths vendor/wimg/php-compatibility,vendor/wp-coding-standards/wpcs', function (err, stdout, stderr) {
 		console.log(stdout);
 		console.log(stderr);
 		if (null === err) {

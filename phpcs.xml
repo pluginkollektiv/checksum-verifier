@@ -2,15 +2,32 @@
 <ruleset name="ChecksumVerifier">
 	<description>Derived from WordPress Coding Standard</description>
 
-	<rule ref="WordPress">
-		<!-- Type hint checks mess up PHP 7 checks, while this plugin has compatibility level 5.5 and above. -->
-		<exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing"/>
+	<!-- Pass some flags to PHPCS:
+		 p flag: Show progress of the run.
+		 s flag: Show sniff codes in all reports.
+		 v flag: Print verbose output.
+		 n flag: Do not print warnings.
+	-->
+	<arg value="psvn"/>
 
+	<!-- use colors in output -->
+	<arg name="colors"/>
+
+	<!-- Files to sniff -->
+	<file>inc</file>
+	<file>checksum-verifier.php</file>
+
+	<!-- Compliance with WordPress Coding Standard -->
+	<config name="minimum_supported_wp_version" value="3.8"/>
+	<rule ref="WordPress">
 		<!-- Direct queries used to clean up transient checksum options. -->
 		<exclude name="WordPress.VIP.DirectDatabaseQuery.DirectQuery"/>
 		<exclude name="WordPress.VIP.DirectDatabaseQuery.NoCaching"/>
-
 		<!-- We don't have VIP Helper available -->
 		<exclude name="WordPress.VIP.RestrictedFunctions.wp_remote_get_wp_remote_get"/>
 	</rule>
+
+	<!-- PHP compatibility level -->
+	<config name="testVersion" value="5.3-"/>
+	<rule ref="PHPCompatibility"/>
 </ruleset>
