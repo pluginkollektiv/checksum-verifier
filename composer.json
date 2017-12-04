@@ -19,12 +19,6 @@
       "homepage": "https://github.com/pluginkollektiv"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/pluginkollektiv/checksum-verifier"
-    }
-  ],
   "type": "wordpress-plugin",
   "require": {
     "php": ">=5.3",
