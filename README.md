@@ -3,7 +3,7 @@
 * Tags:              security, md5, hash, checksum, scan, malware, SoakSoak
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW
 * Requires at least: 3.8
-* Tested up to:      5.2
+* Tested up to:      5.4
 * Stable tag:        0.0.2
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
