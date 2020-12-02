@@ -12,7 +12,7 @@
  * Description: Verifies MD5 checksums of WordPress core files, sends e-mail to the mail address of your admin user warning in case of threat. Just activate it and you are done.
  * Version:     0.0.3
  * Author:      pluginkollektiv
- * Author URI:  https://github.com/pluginkollektiv
+ * Author URI:  https://pluginkollektiv.org/
  * Text Domain: checksum-verifier
  * Domain Path: /lang
  * License:     GPLv2 or later
