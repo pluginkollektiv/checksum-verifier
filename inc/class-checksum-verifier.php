@@ -172,11 +172,7 @@ class Checksum_Verifier {
 	 */
 	private static function notify_admin( $matches ) {
 		// Text domain on demand.
-		load_plugin_textdomain(
-			'checksum-verifier',
-			false,
-			dirname( CHECKSUM_VERIFIER_BASE ) . '/lang'
-		);
+		load_plugin_textdomain( 'checksum-verifier' );
 
 		// Mail recipient.
 		$to = get_bloginfo( 'admin_email' );
@@ -304,5 +300,53 @@ class Checksum_Verifier {
 				'%\\_transient\\_timeout\\_checksums%'
 			)
 		);
+	}
+
+	/**
+	 * Add deprecation notice in WP Admin.
+	 */
+	public static function add_deprecation_notice() {
+		$active = is_plugin_active( 'antivirus/antivirus.php' );
+		?>
+		<div class="notice notice-warning">
+			<p><?php esc_html_e( 'Checksum Verifier is deprecated. Its functionality is integrated into AntiVirus now.', 'checksum-verifier' ); ?></p>
+			<p><?php esc_html_e( 'Switch to AntiVirus now:', 'checksum-verifier ' ); ?></p>
+			<ol>
+				<li><?php esc_html_e( 'Install and activate AntiVirus 1.4.0+.', 'checksum-verifier' ); ?>
+					<?php
+					if ( ! $active ) {
+							$install_url = add_query_arg(
+								array(
+									's' => 'pluginkollektiv',
+									'tab' => 'search',
+									'type' => 'author',
+								),
+								admin_url( '/plugin-install.php' )
+							);
+						?>
+						<a href="<?php echo esc_attr( $install_url ); ?>">
+							<?php esc_html_e( 'Install now.', 'checksum-verifier' ); ?>
+						</a>
+					<?php } ?>
+				</li>
+				<li><?php esc_html_e( 'Enable option "Checksum verification of WP core files".', 'checksum-verifier' ); ?>
+					<?php
+					if ( $active ) {
+							$options_url = add_query_arg(
+								array(
+									'page' => 'antivirus',
+								),
+								admin_url( '/options-general.php' )
+							);
+						?>
+						<a href="<?php echo esc_attr( $options_url ); ?>">
+							<?php esc_html_e( 'Go to AntiVirus settings.', 'checksum-verifier' ); ?>
+						</a>
+					<?php } ?>
+				</li>
+				<li><?php esc_html_e( 'Deactivate and uninstall Checksum Verifier.', 'checksum-verifier' ); ?></li>
+			</ol>
+		</div>
+		<?php
 	}
 }

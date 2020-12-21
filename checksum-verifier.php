@@ -10,11 +10,10 @@
  * Plugin Name: Checksum Verifier
  * Plugin URI:  https://wordpress.org/plugins/checksum-verifier/
  * Description: Verifies MD5 checksums of WordPress core files, sends e-mail to the mail address of your admin user warning in case of threat. Just activate it and you are done.
- * Version:     0.0.3
+ * Version:     0.0.4
  * Author:      pluginkollektiv
  * Author URI:  https://pluginkollektiv.org/
  * Text Domain: checksum-verifier
- * Domain Path: /lang
  * License:     GPLv2 or later
  *
  * Copyright (C)  2014-2015 Sergej Müller
@@ -90,6 +89,13 @@ add_filter(
 	2
 );
 
+add_action(
+	is_network_admin() ? 'network_admin_notices' : 'admin_notices',
+	array(
+		'Checksum_Verifier',
+		'add_deprecation_notice',
+	)
+);
 
 // Autoload.
 require_once sprintf(

@@ -3,14 +3,16 @@ Contributors:      pluginkollektiv
 Tags:              security, md5, hash, checksum, scan, malware, SoakSoak  
 Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW  
 Requires at least: 3.8  
-Tested up to:      5.4  
-Stable tag:        0.0.3  
+Tested up to:      5.6
+Stable tag:        0.0.4  
 License:           GPLv2 or later  
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html  
 
 Verifies MD5 checksums of WordPress core files, sends e-mail to the mail address of your admin user warning in case of threat. Just activate it and you are done.
 
 ## Description ##
+**Warning: *Checksum Verifier* has reached end of life. Its functionality is available in AntiVirus 1.4.0, use this plugin instead.**
+
 *Checksum Verifier* calculates MD5 checksums for all existing WordPress core files and checks them against official checksums. It thus will detect and react upon any unrecognized modifications made on your WordPress core system (for example [SoakSoak malware](http://blog.sucuri.net/2014/12/soaksoak-malware-compromises-100000-wordpress-websites.html)).
 
 *Checksum Verifier* runs a daily check on MD5 checksums. In case an unexpected result is detected in core, the plugin will send an e-mail with a list of affected files to site administrators (or super-admins in WordPress multisite). The first check-up will be executed during plugin activation. Regular core updates won’t cause any alarm, of course. Only in case core files have been compromised and your site might have been hacked, the plugin will notify you.
@@ -43,11 +45,10 @@ Better security with WordPress.
 ## Installation ##
 * If you don’t know how to install a plugin for WordPress, [here’s how](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins).
 
-### System Requirements ###
-* WordPress 3.8 and higher
-* PHP 5.2.4 and higher
-
 ## Changelog ##
+
+### 0.0.4 ###
+* Deprecate plugin in favor of AntiVirus 1.4.0, which integrates Checksum Verifier functionality 
 
 ### 0.0.3 ###
 * Remove `lang` folder in favor of the usage of translate.wordpress.org
